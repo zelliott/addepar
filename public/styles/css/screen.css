@@ -788,9 +788,9 @@ a {
   background: #eee; }
   .process-bkg .container .header {
     background: #fff;
-    height: 20px;
-    line-height: 20px;
-    padding: 20px;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
     position: fixed;
     width: 100%;
     z-index: 100; }
@@ -802,8 +802,8 @@ a {
       font-size: 12px;
       font-weight: 700;
       float: left;
-      height: 20px;
-      line-height: 20px;
+      height: 60px;
+      line-height: 60px;
       margin-left: 20px;
       text-transform: uppercase; }
     .process-bkg .container .header .tab {
@@ -812,7 +812,7 @@ a {
       float: left;
       font-size: 13px;
       font-weight: 500;
-      line-height: 20px;
+      line-height: 60px;
       margin-right: 40px; }
       .process-bkg .container .header .tab:hover {
         color: #666; }
@@ -826,7 +826,7 @@ a {
       cursor: pointer;
       font-size: 13px;
       font-weight: 500;
-      line-height: 20px;
+      line-height: 60px;
       margin-right: 40px; }
       .process-bkg .container .header .user-info span,
       .process-bkg .container .header .logout span {
@@ -975,7 +975,8 @@ a {
         .process-bkg .container .process .phone-column .upcoming-event > div .date-ago-follow-up,
         .process-bkg .container .process .onsite-column .upcoming-event > div .date-ago-follow-up {
           color: #1E88E5;
-          cursor: pointer; }
+          cursor: pointer;
+          display: inline-block; }
           .process-bkg .container .process .phone-column .upcoming-event > div .date-ago-follow-up:hover,
           .process-bkg .container .process .onsite-column .upcoming-event > div .date-ago-follow-up:hover {
             border-bottom: 1px dotted #2196F3;

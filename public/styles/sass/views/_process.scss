@@ -5,9 +5,9 @@
 
     .header {
       background: #fff;
-      height: 20px;
-      line-height: 20px;
-      padding: 20px;
+      height: 60px;
+      line-height: 60px;
+      padding: 0 20px;
       position: fixed;
       width: 100%;
       z-index: 100;
@@ -24,8 +24,8 @@
           font-size: 12px;
           font-weight: 700;
           float: left;
-          height: 20px;
-          line-height: 20px;
+          height: 60px;
+          line-height: 60px;
           margin-left: 20px;
           text-transform: uppercase;
         }
@@ -37,7 +37,7 @@
         float: left;
         font-size: 13px;
         font-weight: 500;
-        line-height: 20px;
+        line-height: 60px;
         margin-right: 40px;
 
         &:hover {
@@ -59,7 +59,7 @@
         cursor: pointer;
         font-size: 13px;
         font-weight: 500;
-        line-height: 20px;
+        line-height: 60px;
         margin-right: 40px;
 
         span {
@@ -260,6 +260,7 @@
             .date-ago-follow-up {
               color: palette(Blue, $shade: 600);
               cursor: pointer;
+              display: inline-block;
 
               &:hover {
                 border-bottom: 1px dotted palette(Blue, $shade: 500);
