@@ -722,6 +722,12 @@
 .oi[data-glyph=zoom-out]:before {
   content: '\e0de'; }
 
+.oi-blue {
+  color: #1E88E5 !important; }
+
+.oi-gray {
+  color: #999 !important; }
+
 body,
 input,
 textarea,
@@ -740,6 +746,44 @@ a {
   a:hover {
     text-decoration: none; }
 
+.modal {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  margin: 0 auto;
+  padding: 20px;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; }
+
+.contact-modal {
+  height: auto;
+  width: 320px; }
+  .contact-modal .contact-name {
+    color: #222;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 5px; }
+  .contact-modal .contact-phone {
+    color: #999;
+    font-size: 16px;
+    font-weight: 400;
+    float: left; }
+  .contact-modal .contact-email {
+    color: #1E88E5;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    float: right; }
+
 .process-bkg {
   background: #eee; }
   .process-bkg .container .header {
@@ -750,20 +794,18 @@ a {
     position: fixed;
     width: 100%;
     z-index: 100; }
-    .process-bkg .container .header .logo {
+    .process-bkg .container .header .logo img {
+      height: 20px;
       float: left; }
-      .process-bkg .container .header .logo img {
-        height: 20px;
-        float: left; }
-      .process-bkg .container .header .logo .logo-text {
-        color: #222;
-        font-size: 12px;
-        font-weight: 700;
-        float: left;
-        height: 20px;
-        line-height: 20px;
-        margin-left: 20px;
-        text-transform: uppercase; }
+    .process-bkg .container .header .logo .logo-text {
+      color: #222;
+      font-size: 12px;
+      font-weight: 700;
+      float: left;
+      height: 20px;
+      line-height: 20px;
+      margin-left: 20px;
+      text-transform: uppercase; }
     .process-bkg .container .header .tab {
       color: #999;
       display: block;
@@ -771,7 +813,7 @@ a {
       font-size: 13px;
       font-weight: 500;
       line-height: 20px;
-      margin-left: 40px; }
+      margin-right: 40px; }
       .process-bkg .container .header .tab:hover {
         color: #666; }
     .process-bkg .container .header .tab-on {
@@ -813,13 +855,24 @@ a {
         .process-bkg .container .process .column-header a b {
           font-weight: 600;
           margin-left: 5px; }
+      .process-bkg .container .process .column-header .column-header-filter {
+        color: #90CAF9;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 12px;
+        float: right; }
+        .process-bkg .container .process .column-header .column-header-filter:hover {
+          color: #E3F2FD; }
+        .process-bkg .container .process .column-header .column-header-filter span {
+          font-size: 8px;
+          margin-left: 5px; }
     .process-bkg .container .process .column {
       border-right: 1px solid #ddd;
       height: 100vh; }
       .process-bkg .container .process .column .card {
         background: #eee;
         border-bottom: 1px solid #ddd;
-        cursor: pointer;
+        cursor: default;
         font-size: 12px;
         padding: 10px 20px; }
         .process-bkg .container .process .column .card:hover {
@@ -846,7 +899,8 @@ a {
           vertical-align: top;
           top: 0;
           z-index: 10; }
-          .process-bkg .container .process .column .on .on-append > a {
+          .process-bkg .container .process .column .on .on-append > a,
+          .process-bkg .container .process .column .on .on-append > span {
             background: #fff;
             border-radius: 100px;
             -moz-border-radius: 100px;
@@ -855,11 +909,13 @@ a {
             -webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
             -moz-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
             box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
             font-size: 12px;
             line-height: 59px;
             margin-left: 20px;
             padding: 7px 10px; }
-            .process-bkg .container .process .column .on .on-append > a:hover {
+            .process-bkg .container .process .column .on .on-append > a:hover,
+            .process-bkg .container .process .column .on .on-append > span:hover {
               background: #222;
               -webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
               -moz-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
@@ -875,7 +931,7 @@ a {
         cursor: pointer;
         font-size: 11px;
         padding: 7px 20px;
-        margin: 0 10px 10px 10px;
+        margin: 10px;
         text-align: center; }
         .process-bkg .container .process .column .add-card:hover {
           background: #009688;
@@ -883,13 +939,12 @@ a {
         .process-bkg .container .process .column .add-card span {
           font-size: 10px;
           margin-right: 5px; }
-    .process-bkg .container .process .candidates-column {
-      padding-top: 10px; }
     .process-bkg .container .process .phone-column .upcoming-event,
     .process-bkg .container .process .onsite-column .upcoming-event {
       display: inline-block;
       height: 38px;
       float: right;
+      width: 100px;
       vertical-align: top; }
       .process-bkg .container .process .phone-column .upcoming-event span.oi,
       .process-bkg .container .process .onsite-column .upcoming-event span.oi {
@@ -897,19 +952,43 @@ a {
         display: inline-block;
         height: 38px;
         line-height: 38px;
-        margin-right: 10px;
+        margin-right: 15px;
         vertical-align: top; }
       .process-bkg .container .process .phone-column .upcoming-event > div,
       .process-bkg .container .process .onsite-column .upcoming-event > div {
-        display: inline-block; }
+        display: inline-block;
+        height: 35px; }
         .process-bkg .container .process .phone-column .upcoming-event > div > span,
         .process-bkg .container .process .onsite-column .upcoming-event > div > span {
           display: block; }
         .process-bkg .container .process .phone-column .upcoming-event > div .date,
         .process-bkg .container .process .onsite-column .upcoming-event > div .date {
-          color: #555; }
+          color: #E57373;
+          margin-bottom: 3px; }
         .process-bkg .container .process .phone-column .upcoming-event > div .date-subtext,
         .process-bkg .container .process .onsite-column .upcoming-event > div .date-subtext {
-          color: #E57373; }
+          color: #555; }
+        .process-bkg .container .process .phone-column .upcoming-event > div .date-ago,
+        .process-bkg .container .process .onsite-column .upcoming-event > div .date-ago {
+          color: #555;
+          margin-bottom: 3px; }
+        .process-bkg .container .process .phone-column .upcoming-event > div .date-ago-follow-up,
+        .process-bkg .container .process .onsite-column .upcoming-event > div .date-ago-follow-up {
+          color: #1E88E5;
+          cursor: pointer; }
+          .process-bkg .container .process .phone-column .upcoming-event > div .date-ago-follow-up:hover,
+          .process-bkg .container .process .onsite-column .upcoming-event > div .date-ago-follow-up:hover {
+            border-bottom: 1px dotted #2196F3;
+            color: #1976D2; }
+        .process-bkg .container .process .phone-column .upcoming-event > div .schedule,
+        .process-bkg .container .process .onsite-column .upcoming-event > div .schedule {
+          color: #1E88E5;
+          cursor: pointer;
+          margin: 10px 0 0 30px;
+          vertical-align: top; }
+          .process-bkg .container .process .phone-column .upcoming-event > div .schedule:hover,
+          .process-bkg .container .process .onsite-column .upcoming-event > div .schedule:hover {
+            border-bottom: 1px dotted #2196F3;
+            color: #1976D2; }
 
 /*# sourceMappingURL=screen.css.map */
